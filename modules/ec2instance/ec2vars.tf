@@ -4,9 +4,9 @@ variable "ec2_instance_type" {
 variable "ec2_instance_az" {
     default = "ua-east-1a"  
 }
-variable "ec2_instance_ami" {
-    default = "ami-02e136e904f3da870"  
-}
+# variable "ec2_instance_ami" {
+#     default = "ami-02e136e904f3da870"  
+# }
 variable "ec2_instance_keypair" {
     default = "keypair"  
 }

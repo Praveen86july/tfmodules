@@ -1,0 +1,26 @@
+{
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "shared_credentials_file": "~/.aws/credentials",
+            "region": "us-east-1",
+            "ami_name": "dev_ubuntu_18.04",
+            "ami_description": "dev_ec2_instance from local system",
+            "instance_type": "t2.micro",
+            "source_ami": "ami-0747bdcabd34c712a",
+            "availability_zone": "us-east-1a",
+            "ssh_username": "ubuntu",
+            "communicator": "ssh",
+            "vpc_id": "vpc-0cc9f9296a870994c",
+            "subnet_id": "subnet-0b52807eb975e2b35"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": [
+                "echo this is dev_ami"
+            ]
+        }
+    ]
+}

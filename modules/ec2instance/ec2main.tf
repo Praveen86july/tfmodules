@@ -1,5 +1,10 @@
+data "aws_ami" "dev" {
+  most_recent = true
+  owners = [ "143458194849" ]
+}
 resource "aws_instance" "dev" {
-    ami = var.ec2_instance_ami
+    ami = data.aws_ami.dev.id
+#    ami = var.ec2_instance_ami
     instance_type = var.ec2_instance_type
     availability_zone = var.ec2_instance_az
     key_name = var.ec2_instance_keypair

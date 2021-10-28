@@ -79,7 +79,7 @@ module "ec2instance" {
 
     source = "../modules/ec2instance"
 
-    ec2_instance_ami = "ami-09e67e426f25ce0d7" #ubuntu-20.04
+#    ec2_instance_ami = "ami-09e67e426f25ce0d7" #ubuntu-20.04
     ec2_instance_type = "t2.micro"
     ec2_instance_az = "us-east-1a"
 
